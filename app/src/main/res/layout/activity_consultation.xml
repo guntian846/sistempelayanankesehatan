@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Form Pendaftaran Layanan"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Input Nama Pasien -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilNama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nama Lengkap Pasien">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etNama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- RadioGroup Jenis Kelamin -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jenis Kelamin:"
+            android:textSize="14sp"
+            android:layout_marginTop="12dp" />
+
+        <RadioGroup
+            android:id="@+id/rgGender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/rbLaki"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Laki-laki" />
+            <RadioButton
+                android:id="@+id/rbPerempuan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Perempuan" />
+        </RadioGroup>
+
+        <!-- RadioGroup Jenis Pasien (BPJS / Umum) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jenis Pembayaran / Pasien:"
+            android:textSize="14sp"
+            android:layout_marginTop="12dp" />
+
+        <RadioGroup
+            android:id="@+id/rgJenisPasien"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/rbBpjs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BPJS Kesehatan" />
+            <RadioButton
+                android:id="@+id/rbUmum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Pasien Umum" />
+        </RadioGroup>
+
+        <!-- Pilihan Poliklinik -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pilih Poliklinik:"
+            android:textSize="14sp"
+            android:layout_marginTop="12dp" />
+
+        <Spinner
+            android:id="@+id/spinnerPoli"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:layout_marginTop="4dp" />
+
+        <!-- Pilihan Dokter -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pilih Dokter Spesialis:"
+            android:textSize="14sp"
+            android:layout_marginTop="12dp" />
+
+        <Spinner
+            android:id="@+id/spinnerDokter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:layout_marginTop="4dp" />
+
+        <!-- CheckBox Persetujuan -->
+        <CheckBox
+            android:id="@+id/cbSetuju"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Saya menyetujui syarat &amp; ketentuan pendaftaran"
+            android:layout_marginTop="12dp" />
+
+        <!-- Tombol Submit -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kirim Pendaftaran"
+            android:layout_marginTop="16dp" />
+
+        <!-- Tampilan Hasil -->
+        <TextView
+            android:id="@+id/tvHasil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="#00796B"
+            android:layout_marginTop="16dp" />
+    </LinearLayout>
+</ScrollView>
